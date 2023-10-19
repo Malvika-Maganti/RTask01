@@ -41,7 +41,7 @@ function WordCounter() {
   const handleTextChange = (e) => {
     const inputText = e.target.value;
     const words = inputText.trim().split(/\s+/);
-    const wordCount = words.length;
+    const wordCount = inputText.trim() === "" ? 0 : words.length;
 
     setText(inputText);
     setWordCount(wordCount);
